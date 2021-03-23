@@ -1,7 +1,10 @@
+# Dependency directories
 node_modules/
 node_modules/*
+jspm_packages/
 
-
+# next.js build output
+.next
 
 # IDE Files
 .idea
