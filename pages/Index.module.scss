@@ -1,0 +1,24 @@
+
+.Grid {
+  margin: 5%;
+  display: flex;
+  flex-flow: row;
+  flex-wrap: wrap;
+}
+
+.StaticLogo {
+  height: 150px;
+  position: fixed;
+  margin-left: auto;
+  margin-right: auto;
+  top: 20px;
+  left: 0;
+  right: 0;
+  z-index: 99;
+}
+
+.AppHeader {
+  height: 150px;
+  padding: 20px;
+  color: white;
+}
