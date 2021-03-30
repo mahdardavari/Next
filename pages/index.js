@@ -2,12 +2,16 @@ import Card from "./Card";
 import styles from "./Index.module.scss";
 import Head from 'next/head';
 import data from '../data/data.json';
-export async function getInitialProps() {
-  return { cards: data }
+
+
+export const getStaticProps = async () => {
+  return {
+    props: { cardsList: data }
+  };
+
 }
-const Home = () => {
-  // static async getInitialProps(){
-  // return {cards:data}
+const Home = ({ cardsList }) => {
+
   return (
     <div>
       <Head>
@@ -18,8 +22,7 @@ const Home = () => {
       </header>
       <div className={styles.Grid}>
         {
-          //TODO 
-          this.props.cards.map((card) => (
+          cardsList.map((card) => (
             <Card key={card.id} />
           ))
         }
