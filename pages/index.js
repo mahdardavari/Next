@@ -1,17 +1,21 @@
 import Card from "./Card";
 import styles from "./Index.module.scss";
 import Head from 'next/head';
-import data from '../data/data.json';
+import { bindActionCreators } from 'redux';
+import { useSelector, useDispatch } from 'react-redux';
+import { initStore, initialCards, addItem } from '../store';
+import withRedux from 'next-redux-wrapper';
 
+const useCards = () => {
+  const card = useSelector((state) => state.id);
+  const dispath = useDispatch();
+  const cardsList = () =>
+    dispath({ type: 'INITIALCARDS', })
 
-export const getStaticProps = async () => {
-  return {
-    props: { cardsList: data }
-  };
-
+  return { card, cardsList }
 }
-const Home = ({ cardsList }) => {
-
+const Home = () => {
+  const { card, cardsList } = useCards();
   return (
     <div>
       <Head>
