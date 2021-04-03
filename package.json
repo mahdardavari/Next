@@ -8,10 +8,7 @@
     "build": "next build",
     "start": "next start"
   },
-  "keywords": [
-    "mahdar"
-  ],
-  "author": "davarilotf1010",
+  "author": "Mahdar Davari ",
   "license": "ISC",
   "dependencies": {
     "css-loader": "^5.1.3",

@@ -1,4 +1,4 @@
-import Card from "./Card";
+import Card from "../component/card/Card";
 import styles from "./Index.module.scss";
 import Head from 'next/head';
 import data from '../data/data.json';
@@ -10,8 +10,8 @@ export const getStaticProps = async () => {
   };
 
 }
-const Home = ({ cardsList }) => {
 
+const Home = ({ cardsList, login }) => {
   return (
     <div>
       <Head>
@@ -21,11 +21,9 @@ const Home = ({ cardsList }) => {
         <img src="/static/logo.png" className={styles.StaticLogo} />
       </header>
       <div className={styles.Grid}>
-        {
-          cardsList.map((card) => (
+        {cardsList.map((card) => (
             <Card key={card.id} />
-          ))
-        }
+          ))}
       </div>
     </div>
   )
