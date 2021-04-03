@@ -1,4 +1,4 @@
-import Welcome from '../component/Welcome'
+import Welcome from '../component/welcome/Welcome'
 
 const About = () => {
     return(
