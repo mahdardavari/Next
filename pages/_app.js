@@ -1,5 +1,5 @@
 import "./globals.scss";
-
-export default function App({Component, pageProps}) {
+import 'tailwindcss/tailwind.css';
+export default function App({ Component, pageProps }) {
     return <Component {...pageProps} login={false} />;
 }

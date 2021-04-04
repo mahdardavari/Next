@@ -1,7 +1,7 @@
 import Welcome from '../component/welcome/Welcome'
 
 const About = () => {
-    return(
+    return (
         <div>
             thi is about page
             <Welcome />
