@@ -3,7 +3,7 @@ import styles from "./Card.module.scss";
 const Card = (props) => (
   <div className={styles.Card}>
     <div className={styles.Front}>
-      <img src="/public/juice.jpg" alt="Avatar" className={styles.CardImage} />
+      <img src="/juice.jpg" alt="Avatar" className={styles.CardImage} />
       <div className={styles.Container}>
         <h3>
           Vitamin Juice <span className={styles.Price}>$24.99</span>
